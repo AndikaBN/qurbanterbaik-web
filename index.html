@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qurban Terbaik - Solusi Qurban Anda</title>
+    <style>
+        /* Reset margin dan padding agar penuh 100% layar */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Mencegah double scrollbar */
+            background-color: #f4f4f4;
+        }
+
+        /* Styling Iframe agar menutupi seluruh layar */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Container untuk tombol melayang */
+        .floating-buttons {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999; /* Memastikan selalu berada di atas web nusaqu */
+        }
+
+        /* Styling dasar tombol */
+        .float-btn {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .float-btn:hover {
+            transform: scale(1.1); /* Efek membesar saat disentuh/di-hover */
+        }
+
+        /* Ikon di dalam tombol */
+        .float-btn img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+        }
+
+        /* Warna background khusus WA dan Telegram */
+        .wa-btn { background-color: #25D366; }
+        .tg-btn { background-color: #0088cc; }
+
+        /* Responsif untuk HP: perkecil sedikit ukuran tombolnya */
+        @media (max-width: 768px) {
+            .float-btn { width: 50px; height: 50px; }
+            .float-btn img { width: 30px; height: 30px; }
+            .floating-buttons { bottom: 20px; right: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <iframe 
+        src="https://app.nusaqu.id/katalog/138" 
+        sandbox="allow-same-origin allow-scripts allow-popups allow-forms allow-top-navigation"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Katalog Qurban">
+    </iframe>
+
+    <div class="floating-buttons">
+        <a href="https://wa.me/6281234567890?text=Halo,%20saya%20ingin%20bertanya%20tentang%20Qurban" target="_blank" class="float-btn wa-btn" title="Chat WhatsApp">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+
+        <a href="https://t.me/username_telegram_disini" target="_blank" class="float-btn tg-btn" title="Chat Telegram">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+        </a>
+    </div>
+
+</body>
+</html>
